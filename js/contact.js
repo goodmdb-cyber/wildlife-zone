@@ -7,7 +7,7 @@
      Access Key 를 아래 따옴표 안에 붙여 넣으세요.
      (키를 넣기 전에는 "보내기"를 누르면 메일 프로그램이 열립니다.)
    ========================================================= */
-var WEB3FORMS_ACCESS_KEY = "";
+var WEB3FORMS_ACCESS_KEY = "27f67e01-5481-4f76-8073-8f18af50cf47";
 var CONTACT_EMAIL = "wildlife-zone@naver.com";
 
 (function () {
