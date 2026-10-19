@@ -67,9 +67,10 @@
   - 웹 화면으로 올릴 때 파일 1개당 25MB 이하, 한 번에 100개 이하
 
 
-[추가] 레이저 페이지 "레이저 + 태양광 + 크레졸" 현장 사진·동영상 (2026-10-19)
-  - laser.html 에서 Ctrl+F "hybrid-field" 를 찾으면 사진·동영상 칸이 나옵니다.
-  - 사진: images/laser/hybrid-field-01.jpg ~ 06.jpg (감천 과수원)
-  - 동영상: videos/hybrid-gamcheon-1.mp4, hybrid-gamcheon-2.mp4 (감천),
-            videos/hybrid-cheongsong.mp4 (청송) + 같은 이름의 .jpg 는 동영상 첫 화면
+[추가] 레이저 + 태양광 + 크레졸 자료 (2026-10-19)
+  - laser.html : "레이저 + 태양광 + 크레졸" 설명 아래 전시 제품 대표 사진 1장·동영상 1개
+      사진 images/laser/hybrid-exhibit.jpg, 동영상 videos/hybrid-exhibit.mp4 (+ 같은 이름 .jpg 첫 화면)
+  - gallery.html : Ctrl+F "hybrid-field" → 감천·청송 과수원 현장 시험 사진 6장·동영상 3개
+      사진 images/laser/hybrid-field-01.jpg ~ 06.jpg
+      동영상 videos/hybrid-gamcheon-1.mp4, hybrid-gamcheon-2.mp4, hybrid-cheongsong.mp4
   - 사진을 더 넣으려면 <figure> 한 줄을 복사해 파일 이름과 설명만 바꾸세요.
