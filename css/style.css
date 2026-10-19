@@ -281,6 +281,14 @@ footer .copy { color: #9a9a9a; align-self: flex-end; }
 .t1-use-photos img.contain { object-fit: contain; padding: 16px; background: #fff; }
 .t1-use-photos figcaption { padding: 16px 20px 18px; border-top: 3px solid var(--mint); flex: 1; }
 .t1-use-photos figcaption b { display: block; color: var(--title); font-weight: 500; font-size: 1.05rem; margin-bottom: 4px; }
+.t1-howsound { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: center; background: #fff; border: 1px solid var(--line); padding: 30px; margin-top: 24px; }
+.t1-howsound svg { width: 100%; height: auto; display: block; }
+.t1-howsound h3 { font-weight: 500; }
+.t1-steps { list-style: none; padding: 0; margin: 0; }
+.t1-steps li { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.t1-steps li:last-child { border-bottom: 0; }
+.t1-steps i { flex: 0 0 28px; height: 28px; line-height: 28px; border-radius: 50%; background: #1f4d3a; color: #fff; font-style: normal; text-align: center; font-size: .9rem; margin-top: 2px; }
+.t1-steps b { display: block; color: var(--title); font-weight: 500; }
 @media (max-width: 860px) {
   .t1-big { font-size: 1.7rem; }
   .t1-three, .t1-zones, .t1-faq, .t1-day, .t1-list.two, .t1-install, .t1-proof { grid-template-columns: 1fr; }
@@ -294,5 +302,6 @@ footer .copy { color: #9a9a9a; align-self: flex-end; }
   .t1-cta .tel { font-size: 1.6rem; }
   .t1-figure img { max-height: 380px; }
   .t1-use-photos { grid-template-columns: 1fr; }
+  .t1-howsound { grid-template-columns: 1fr; padding: 18px; gap: 18px; }
   .t1-use-photos img { height: 280px; }
 }
