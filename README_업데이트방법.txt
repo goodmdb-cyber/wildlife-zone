@@ -74,3 +74,10 @@
       사진 images/laser/hybrid-field-01.jpg ~ 06.jpg
       동영상 videos/hybrid-gamcheon-1.mp4, hybrid-gamcheon-2.mp4, hybrid-cheongsong.mp4
   - 사진을 더 넣으려면 <figure> 한 줄을 복사해 파일 이름과 설명만 바꾸세요.
+
+[추가] T 시리즈 페이지를 T1 상세 설명으로 개편 (2026-10-19)
+  - tseries.html : T1 단독 상세 페이지 (T2·T3 소개 칸 삭제, 위쪽 분류에 "T2 (출원 완료)" 표시만 남김)
+  - 그림(일러스트)은 사진 파일이 아니라 tseries.html 안에 그려져 있습니다(<svg> 부분).
+  - 순서: 첫 화면 → 3중 방어 그림 → 사방으로 퍼지는 소리 → 레이저 → 사용법(적색 버튼) → 사양·특허·문의
+  - 새 사진: images/t1/t1-product.jpg(본체), t1-award.jpg(우수특허대상)
+  - 이 페이지 전용 디자인은 css/style.css 맨 아래 "T1 상세 페이지" 부분에 있습니다.
