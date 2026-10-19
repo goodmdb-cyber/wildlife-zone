@@ -53,19 +53,23 @@
   - 키를 넣기 전에는 "보내기"를 누르면 방문자 PC의 메일 프로그램이 열립니다.
   - 문의 창의 항목(관심 제품 목록 등)도 js/contact.js 에서 수정합니다.
 
-[7] 추천 게시 방법 : GitHub + Vercel (무료)
-  처음 한 번만 설정
-  1) github.com 에서 새 저장소(Repository) 만들기 → 이 폴더 안의 파일 전체를 끌어다 놓고 Commit
-     (웹 화면으로 올릴 때 파일 1개당 25MB 이하·한 번에 100개 이하, 현재 가장 큰 동영상은 약 15MB)
-  2) vercel.com 에 GitHub 계정으로 로그인 → Add New Project → 방금 만든 저장소 Import → Deploy
-     (Framework 는 "Other", 빌드 설정은 비워 둡니다)
-  3) Vercel 프로젝트 → Settings → Domains 에서 wildlife-zone.com 과 www.wildlife-zone.com 추가
-  4) 닷네임코리아 → 도메인 관리 → DNS(네임서버/레코드) 설정에서
-     Vercel 화면에 표시되는 값을 그대로 입력
-       - wildlife-zone.com      A 레코드     (일반값 76.76.21.21)
-       - www.wildlife-zone.com  CNAME 레코드 (Vercel 화면에 표시된 값)
-     몇 분~몇 시간 뒤 Vercel 에 "Valid Configuration" 이 뜨면 완료 (https 자동 적용)
+[7] 게시(호스팅) 현황 : GitHub + Cloudflare Pages (무료)
+  - 파일 창고 : github.com/goodmdb-cyber/wildlife-zone
+  - 호스팅   : Cloudflare Pages 프로젝트 "wildlife-zone" (wildlife-zone.pages.dev)
+  - 도메인   : wildlife-zone.com / www.wildlife-zone.com (닷네임 등록, 네임서버는 Cloudflare)
+               gordon.ns.cloudflare.com / millie.ns.cloudflare.com
 
-  이후 업데이트
-  - github.com 저장소 화면에서 파일을 끌어다 놓거나(사진·동영상),
-    연필 아이콘으로 html 을 바로 수정한 뒤 Commit 하면 1~2분 안에 사이트에 자동 반영됩니다.
+  수정·업데이트 방법
+  1) github.com → wildlife-zone 창고로 이동
+  2) 사진·동영상 : 해당 폴더로 들어가 Add file → Upload files → 끌어다 놓기 → Commit changes
+     글 수정     : html 파일 클릭 → 연필(✏) 아이콘 → 수정 → Commit changes
+  3) 1~2분 뒤 wildlife-zone.com 에 자동 반영 (Cloudflare 에서 할 일 없음)
+  - 웹 화면으로 올릴 때 파일 1개당 25MB 이하, 한 번에 100개 이하
+
+
+[추가] 레이저 페이지 "레이저 + 태양광 + 크레졸" 현장 사진·동영상 (2026-10-19)
+  - laser.html 에서 Ctrl+F "hybrid-field" 를 찾으면 사진·동영상 칸이 나옵니다.
+  - 사진: images/laser/hybrid-field-01.jpg ~ 06.jpg (감천 과수원)
+  - 동영상: videos/hybrid-gamcheon-1.mp4, hybrid-gamcheon-2.mp4 (감천),
+            videos/hybrid-cheongsong.mp4 (청송) + 같은 이름의 .jpg 는 동영상 첫 화면
+  - 사진을 더 넣으려면 <figure> 한 줄을 복사해 파일 이름과 설명만 바꾸세요.
