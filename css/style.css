@@ -176,3 +176,115 @@ footer .copy { color: #9a9a9a; align-self: flex-end; }
 .photos.single { display: block; max-width: 460px; margin: 30px auto 40px; }
 .photos.single img { height: auto; max-height: none; width: 100%; }
 .photos.single figcaption { text-align: center; }
+
+/* =========================================================
+   T1 상세 페이지 (tseries.html) 전용
+   ========================================================= */
+.tab-off { border: 1px dashed #b5b5b5; padding: 6px 18px; color: #9a9a9a; }
+.tabs.sub { margin-top: 12px; gap: 6px 14px; }
+.tabs.sub a { border: 0; padding: 2px 4px; font-size: .92rem; color: #1a9c83; text-decoration: underline; text-underline-offset: 4px; }
+.tabs.sub a:hover { background: none; color: var(--dark); }
+.t1-big { font-size: 2.3rem; font-weight: 500; }
+.t1-big em { font-style: normal; color: #1a9c83; }
+.t1-lead { font-size: 1.15rem; color: var(--title); }
+.t1-lead b { color: #1a9c83; font-weight: 500; }
+.t1-stat { border: 1px solid var(--line); border-left: 4px solid var(--mint); padding: 14px 18px; margin: 22px 0; background: #fff; }
+.t1-stat span, .t1-stat small { display: block; font-size: .85rem; }
+.t1-stat strong { display: block; font-size: 1.9rem; font-weight: 700; color: var(--title); line-height: 1.3; }
+.t1-tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.t1-tags li { background: var(--light); border: 1px solid var(--line); padding: 3px 12px; font-size: .88rem; color: var(--title); }
+.t1-figure { margin: 0; text-align: center; }
+.t1-figure img { max-height: 520px; width: auto; margin: 0 auto; }
+.t1-figure figcaption { font-size: .88rem; margin-top: 8px; }
+.t1-figure.video video { width: 100%; max-height: 560px; background: #000; }
+.t1-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.t1-three > div { background: #fff; border-top: 4px solid #1f4d3a; padding: 26px 24px; }
+.t1-three svg { width: 64px; height: 64px; margin-bottom: 10px; }
+.t1-kind { display: block; color: #1a9c83; font-weight: 500; font-size: .92rem; }
+.t1-three h3 { margin-bottom: .4em; font-weight: 500; }
+.t1-three p { margin: 0; }
+.t1-illust svg { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+.t1-zones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+.t1-zones div { padding: 18px 20px; background: var(--light); }
+.t1-zones .z1 { background: #eaf2fc; } .t1-zones .z2 { background: #eaf6ef; } .t1-zones .z3 { background: #fdf1e7; }
+.t1-zones b { display: block; color: var(--title); font-weight: 500; margin-bottom: 4px; font-size: 1.05rem; }
+.t1-zones i { font-style: normal; display: inline-block; width: 26px; height: 26px; line-height: 26px; text-align: center; border-radius: 50%; color: #fff; font-size: .9rem; margin-right: 6px; }
+.t1-zones .z1 i { background: #3b82f6; } .t1-zones .z2 i { background: #1a9c83; } .t1-zones .z3 i { background: #e8863f; }
+.t1-note { font-size: .88rem; color: #8a8888; margin: 14px 0 0; }
+.t1-note.center { text-align: center; margin: 4px 0 18px; }
+.t1-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.t1-faq > div { background: #fff; border: 1px solid var(--line); padding: 20px 22px; }
+.t1-faq .q { margin: 0 0 10px; color: #b4232f; font-weight: 400; }
+.t1-faq .q::before { content: "✕ "; }
+.t1-faq .a { margin: 0; }
+.t1-faq .a b { display: block; color: #1a9c83; font-weight: 500; }
+.t1-compare { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: stretch; }
+.t1-compare > div { background: var(--light); padding: 22px; }
+.t1-compare .good { background: #eef7f1; }
+.t1-compare .vs { background: none; align-self: center; font-weight: 700; color: #b5b5b5; font-size: 1.4rem; padding: 0; }
+.t1-compare svg { width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto 10px; }
+.t1-compare h3 { text-align: center; font-weight: 500; }
+.t1-compare p { margin: 0; }
+.t1-gap { margin-top: 60px; }
+.t1-gap svg { width: 100%; height: auto; }
+.t1-gap h3 { font-weight: 500; }
+.t1-parts { padding-left: 1.4em; margin: 0; }
+.t1-parts li { margin: 6px 0; }
+.t1-parts b { color: var(--title); font-weight: 500; margin-right: 6px; }
+.t1-rain { display: grid; grid-template-columns: 320px 1fr; gap: 30px; align-items: center; background: #edf2f8; padding: 24px 28px; margin-top: 50px; }
+.t1-rain svg { width: 100%; height: auto; }
+.t1-rain h3 { font-weight: 500; }
+.t1-rain p { margin: 0; }
+.t1-beams { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 360px; margin: 0 auto; }
+.t1-beams figure { margin: 0; text-align: center; font-size: .85rem; }
+.t1-list { list-style: none; padding: 0; margin: 0; }
+.t1-list li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.t1-list b { color: var(--title); font-weight: 500; margin-right: 8px; }
+.t1-list.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 30px; margin-top: 30px; }
+.t1-warn { margin-top: 30px; padding: 14px 18px; background: #fff; border-left: 4px solid #e11d2e; font-size: .95rem; }
+.t1-warn b { color: var(--title); font-weight: 500; margin-right: 8px; }
+.t1-warn strong { color: #c62828; font-weight: 500; }
+.t1-day { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.t1-day > div { background: var(--light); padding: 24px 16px; text-align: center; }
+.t1-day > div.dash { background: #fff; border: 2px dashed #1a9c83; }
+.gray .t1-day > div { background: #fff; }
+.gray .t1-day > div.dash { background: #fff; }
+.t1-day svg { width: 64px; height: 64px; margin: 0 auto 10px; display: block; }
+.t1-day h3 { font-weight: 500; font-size: 1.15rem; margin-bottom: .3em; }
+.t1-day p { margin: 0; }
+.t1-day strong { color: #c62828; font-weight: 500; font-size: 1.1rem; }
+.t1-install { display: grid; grid-template-columns: 1.4fr 1fr; gap: 30px; align-items: center; }
+.t1-parts-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.t1-parts-photos figure { margin: 0; background: #fff; border: 1px solid var(--line); }
+.t1-parts-photos img { width: 100%; height: 260px; object-fit: contain; background: #fff; padding: 10px; }
+.t1-parts-photos figcaption { font-size: .88rem; padding: 10px 14px; border-top: 1px solid var(--line); }
+.t1-parts-photos figcaption b { display: block; color: var(--title); font-weight: 500; font-size: 1rem; }
+.t1-pole svg { width: 100%; max-width: 320px; height: auto; display: block; margin: 0 auto; background: #fff; border: 1px solid var(--line); }
+.t1-cases { display: grid; gap: 30px; }
+.t1-cases article { display: grid; grid-template-columns: 300px 1fr; gap: 30px; align-items: start; border: 1px solid var(--line); padding: 20px; }
+.t1-cases img { width: 100%; height: 380px; object-fit: cover; }
+.t1-cases h3 { font-weight: 500; margin-bottom: .2em; }
+.t1-meta { margin: 0 0 10px; color: #1a9c83; }
+.t1-cases ul { padding-left: 1.2em; margin: 0 0 16px; }
+.t1-cases blockquote { margin: 0; background: #1f4d3a; color: #fff; padding: 16px 20px; font-weight: 400; }
+.t1-cases cite { display: block; font-style: normal; font-size: .85rem; color: #b9d8c8; margin-top: 6px; }
+.t1-sub { text-align: center; margin-top: 60px; font-weight: 500; }
+.t1-icons { margin-top: 20px; }
+.t1-proof { grid-template-columns: repeat(3, 1fr); }
+.t1-proof img { height: 300px; }
+.t1-cta { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; background: #1f4d3a; color: #fff; padding: 26px 30px; margin-top: 20px; }
+.t1-cta span { display: block; font-size: .95rem; color: #b9d8c8; }
+.t1-cta .tel { color: #fff; text-decoration: none; font-size: 2rem; font-weight: 700; letter-spacing: .02em; }
+@media (max-width: 860px) {
+  .t1-big { font-size: 1.7rem; }
+  .t1-three, .t1-zones, .t1-faq, .t1-day, .t1-list.two, .t1-install, .t1-proof { grid-template-columns: 1fr; }
+  .t1-day { grid-template-columns: 1fr 1fr; }
+  .t1-compare { grid-template-columns: 1fr; }
+  .t1-compare .vs { text-align: center; }
+  .t1-rain { grid-template-columns: 1fr; padding: 20px; }
+  .t1-cases article { grid-template-columns: 1fr; padding: 14px; }
+  .t1-cases img { height: 340px; }
+  .t1-parts-photos img { height: 200px; }
+  .t1-cta .tel { font-size: 1.6rem; }
+  .t1-figure img { max-height: 380px; }
+}
