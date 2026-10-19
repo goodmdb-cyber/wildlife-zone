@@ -275,6 +275,12 @@ footer .copy { color: #9a9a9a; align-self: flex-end; }
 .t1-cta { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; background: #1f4d3a; color: #fff; padding: 26px 30px; margin-top: 20px; }
 .t1-cta span { display: block; font-size: .95rem; color: #b9d8c8; }
 .t1-cta .tel { color: #fff; text-decoration: none; font-size: 2rem; font-weight: 700; letter-spacing: .02em; }
+.t1-use-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+.t1-use-photos figure { margin: 0; background: #fff; border: 1px solid var(--line); display: flex; flex-direction: column; }
+.t1-use-photos img { width: 100%; height: 340px; object-fit: cover; object-position: center 35%; }
+.t1-use-photos img.contain { object-fit: contain; padding: 16px; background: #fff; }
+.t1-use-photos figcaption { padding: 16px 20px 18px; border-top: 3px solid var(--mint); flex: 1; }
+.t1-use-photos figcaption b { display: block; color: var(--title); font-weight: 500; font-size: 1.05rem; margin-bottom: 4px; }
 @media (max-width: 860px) {
   .t1-big { font-size: 1.7rem; }
   .t1-three, .t1-zones, .t1-faq, .t1-day, .t1-list.two, .t1-install, .t1-proof { grid-template-columns: 1fr; }
@@ -287,4 +293,6 @@ footer .copy { color: #9a9a9a; align-self: flex-end; }
   .t1-parts-photos img { height: 200px; }
   .t1-cta .tel { font-size: 1.6rem; }
   .t1-figure img { max-height: 380px; }
+  .t1-use-photos { grid-template-columns: 1fr; }
+  .t1-use-photos img { height: 280px; }
 }
