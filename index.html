@@ -154,5 +154,68 @@
 </footer>
 
 <script src="js/contact.js"></script>
+
+<!-- ===== T1 전단지 팝업 (첫 화면에서 자동으로 뜸) =====
+     - 전단지 그림 바꾸기: images/flyer/ 폴더의 t1-flyer-front.jpg(앞면), t1-flyer-back.jpg(뒷면)를 같은 이름으로 바꿔 올리면 됩니다.
+     - "오늘 하루 보지 않기"를 누르면 그날 밤 12시까지 다시 뜨지 않습니다(같은 브라우저 기준). -->
+<style>
+  .flyer-pop { position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,.65); display: flex; align-items: center; justify-content: center; padding: 16px; }
+  .flyer-pop[hidden] { display: none; }
+  .flyer-box { position: relative; width: 100%; max-width: 620px; max-height: 100%; display: flex; flex-direction: column; background: #fff; box-shadow: 0 10px 40px rgba(0,0,0,.4); }
+  .flyer-scroll { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .flyer-page { position: relative; margin: 0; }
+  .flyer-page + .flyer-page { border-top: 8px solid #e9ece9; }
+  .flyer-page img { display: block; width: 100%; height: auto; }
+  .flyer-qr { position: absolute; left: 69.5%; top: 91.1%; width: 24.1%; height: 6.4%; border-radius: 6px; }
+  .flyer-qr:focus-visible { outline: 3px solid #44dbbd; outline-offset: 2px; }
+  .flyer-x { position: absolute; top: 8px; right: 8px; z-index: 2; width: 40px; height: 40px; border: 0; border-radius: 50%; background: rgba(0,0,0,.6); color: #fff; font-size: 24px; line-height: 40px; cursor: pointer; }
+  .flyer-bar { display: flex; border-top: 1px solid #ddd; background: #2f2e2e; }
+  .flyer-bar button { flex: 1; padding: 14px 10px; border: 0; background: none; color: #fff; font: inherit; font-size: 15px; cursor: pointer; }
+  .flyer-bar button + button { border-left: 1px solid #555; }
+  .flyer-bar button:hover { background: #44dbbd; color: #222; }
+  body.flyer-open { overflow: hidden; }
+  @media (max-width: 600px) { .flyer-pop { padding: 8px; } }
+</style>
+<div class="flyer-pop" id="flyerPop" role="dialog" aria-modal="true" aria-label="스마트 조류퇴치기 T1 전단지" hidden>
+  <div class="flyer-box">
+    <button type="button" class="flyer-x" data-close aria-label="닫기">&times;</button>
+    <div class="flyer-scroll">
+      <figure class="flyer-page">
+        <img src="images/flyer/t1-flyer-front.jpg" width="2500" height="3538" alt="T1 전단지 앞면: T1 사용 후 달라진 점, 예천 사과밭 농가주 평가, 하늘부터 나무 위까지 3중 방어, 제품 사양">
+      </figure>
+      <figure class="flyer-page">
+        <img src="images/flyer/t1-flyer-back.jpg" width="1300" height="1840" alt="T1 전단지 뒷면: 새는 적응합니다, 그래서 T1은 세 가지를 동시에 씁니다. 본체와 제어부, 빛·소리·눈부심 세 가지 퇴치 방법, 제품 문의 010-2410-4858">
+        <a class="flyer-qr" href="https://m.site.naver.com/2jFmD" target="_blank" rel="noopener" aria-label="작동 영상·설치 현장 바로 보기 (네이버 블로그)"></a>
+      </figure>
+    </div>
+    <div class="flyer-bar">
+      <button type="button" data-today>오늘 하루 보지 않기</button>
+      <button type="button" data-close>닫기</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var pop = document.getElementById('flyerPop');
+  if (!pop) return;
+  var KEY = 'flyerHideUntil';
+  function now() { return new Date().getTime(); }
+  var hideUntil = 0;
+  try { hideUntil = parseInt(localStorage.getItem(KEY) || '0', 10); } catch (e) {}
+  if (hideUntil > now()) return;
+  function close() { pop.hidden = true; document.body.classList.remove('flyer-open'); }
+  pop.hidden = false;
+  document.body.classList.add('flyer-open');
+  var btns = pop.querySelectorAll('[data-close]');
+  for (var i = 0; i < btns.length; i++) btns[i].addEventListener('click', close);
+  pop.querySelector('[data-today]').addEventListener('click', function () {
+    var end = new Date(); end.setHours(24, 0, 0, 0);
+    try { localStorage.setItem(KEY, String(end.getTime())); } catch (e) {}
+    close();
+  });
+  pop.addEventListener('click', function (e) { if (e.target === pop) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !pop.hidden) close(); });
+})();
+</script>
 </body>
 </html>

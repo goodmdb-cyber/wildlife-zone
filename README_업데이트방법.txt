@@ -82,3 +82,12 @@
   - 새 사진: images/t1/t1-product.jpg(본체), t1-award.jpg(우수특허대상),
             t1-redbutton.jpg(조작함·적색 버튼), t1-mount.jpg(기둥에 고정한 본체 - 옮겨 다시 세우기)
   - 이 페이지 전용 디자인은 css/style.css 맨 아래 "T1 상세 페이지" 부분에 있습니다.
+
+[추가] 첫 화면 T1 전단지 팝업 (2026-11-08)
+  - index.html 맨 아래 "T1 전단지 팝업" 부분. 홈에 들어오면 전단지(앞면→뒷면)가 팝업으로 뜹니다.
+  - 버튼: "오늘 하루 보지 않기"(그날 밤 12시까지 안 뜸), "닫기"(이번만 닫힘), 오른쪽 위 ✕
+  - 뒷면 QR코드와 "바로 보기" 글자를 누르면 https://m.site.naver.com/2jFmD (네이버 블로그) 로 이동
+  - 전단지 그림 바꾸기: images/flyer/t1-flyer-front.jpg(앞면), t1-flyer-back.jpg(뒷면)를
+    같은 이름으로 GitHub images/flyer 폴더에 다시 올리면 됩니다.
+  - 팝업을 잠시 끄려면: index.html 에서 id="flyerPop" 줄 위의 <!-- ===== T1 전단지 팝업 부분부터
+    </script> 까지를 지우면 됩니다(지우기 전에 파일을 복사해 두세요).
